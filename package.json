@@ -19,7 +19,7 @@
     "lint:prettier": "prettier --check \"**/*\" --end-of-line auto",
     "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
     "prettier": "prettier -c --write \"**/*\"",
-    "start": "concurrently npm:server npm:dev-server",
+    "start": "concurrently npm:dev-server npm:server",
     "dev-server": "cross-env UMI_UI=none APP_ROOT=client umi dev",
     "server": "nodemon --config scripts/nodemon.json",
     "start:dev": "cross-env REACT_APP_ENV=dev MOCK=none umi dev",
@@ -54,10 +54,13 @@
     "@ant-design/icons": "^4.0.0",
     "@ant-design/pro-layout": "6.0.0-3",
     "@ant-design/pro-table": "^2.2.0",
+    "@types/koa-static": "^4.0.1",
     "antd": "^4.0.0",
     "classnames": "^2.2.6",
     "koa": "^2.12.0",
+    "koa-nunjucks-2": "^3.0.2",
     "koa-router": "^9.0.1",
+    "koa-static": "^5.0.0",
     "lodash": "^4.17.15",
     "moment": "^2.25.3",
     "omit.js": "^1.0.2",
@@ -77,6 +80,7 @@
     "@types/koa": "^2.11.3",
     "@types/koa-router": "^7.4.1",
     "@types/lodash": "^4.14.144",
+    "@types/node": "^14.0.12",
     "@types/qs": "^6.5.3",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.8.4",
@@ -103,7 +107,9 @@
     "pro-download": "1.0.1",
     "puppeteer-core": "^2.1.1",
     "stylelint": "^13.0.0",
-    "ts-node": "^8.10.2"
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5",
+    "webpack-chain": "^6.4.0"
   },
   "engines": {
     "node": ">=10.0.0"

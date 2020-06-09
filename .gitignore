@@ -38,3 +38,9 @@ screenshot
 .eslintcache
 
 build
+server/views/**/*.js
+server/views/**/*.css
+server/views/**/*.map
+server/views/**/*.png
+server/views/**/*.svg
+

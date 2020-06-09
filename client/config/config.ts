@@ -3,6 +3,7 @@ import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
 import routes from './routes';
+import { webpackPlugin} from './plugin.config';
 
 const { REACT_APP_ENV } = process.env;
 
@@ -12,6 +13,7 @@ export default defineConfig({
   dva: {
     hmr: true,
   },
+  outputPath: "../server/views",
   layout: {
     name: 'Ant Design Pro',
     locale: true,
@@ -41,5 +43,17 @@ export default defineConfig({
   proxy: proxy[REACT_APP_ENV || 'dev'],
   manifest: {
     basePath: '/',
+  },
+  chainWebpack: (config)=> {
+    config.output.crossOriginLoading('anonymous');
+  },  
+  devServer: {
+    // 允许跨域
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': '*',
+      'Access-Control-Allow-Headers': '*',
+      'Access-Control-Allow-Credentials': 'true',
+    }
   },
 });

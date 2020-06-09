@@ -1,14 +1,26 @@
-import * as Koa from 'koa';
-import * as Router from 'koa-router';
+const Koa = require('koa');
+// import * as Koa from 'koa';
+const path = require('path');
+const koaNunjucks  = require('koa-nunjucks-2');
+
+const serve = require('koa-static');
+
+import router from './router';
 
 const app = new Koa();
-const router = new Router();
 
-router.get('/', async (ctx) => {
-    ctx.body = 'Welcom, my koa server worked!';
-});
+const staticPath = path.join(__dirname, 'views');
+app.use(koaNunjucks({
+  ext: 'html',
+  path: staticPath,
+  nunjucksConfig: {
+    noCache: true
+  }
+}))
 
-app.use(router.routes());
+app.use(serve(staticPath))
+
+router(app);
 
 app.listen(3000, ()=> {
   console.log(`Server running on  http://localhost:3000`);

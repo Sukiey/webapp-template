@@ -10,7 +10,9 @@
 
 服务端
 * koa2
-* koa-router
+* koa-router 路由
+* koa-nunjucks-2 模板引擎
+* koa-static 静态资源管理
 
 ## 项目搭建过程
 * [umijs项目根目录改为 client]()
