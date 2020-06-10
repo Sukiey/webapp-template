@@ -3,7 +3,6 @@ import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
 import routes from './routes';
-import { webpackPlugin} from './plugin.config';
 
 const { REACT_APP_ENV } = process.env;
 
@@ -27,6 +26,9 @@ export default defineConfig({
     // default true, when it is true, will use `navigator.language` overwrite default
     antd: true,
     baseNavigator: true,
+  },
+  define: {
+    'process.env.NODE_ENV': process.env.NODE_ENV
   },
   dynamicImport: isDev ? false : {
     loading: '@/components/PageLoading/index',
