@@ -1,7 +1,7 @@
 export default {
   current: async (ctx, next)=> {
     ctx.body = {
-      name: 'Serati Ma',
+      name: 'Serati Ma123',
       avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
       userid: '00000001',
       email: 'antdesign@alipay.com',

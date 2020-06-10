@@ -7,6 +7,8 @@ import { webpackPlugin} from './plugin.config';
 
 const { REACT_APP_ENV } = process.env;
 
+const isDev = process.env.NODE_ENV === 'development';
+
 export default defineConfig({
   hash: true,
   antd: {},
@@ -26,7 +28,7 @@ export default defineConfig({
     antd: true,
     baseNavigator: true,
   },
-  dynamicImport: {
+  dynamicImport: isDev ? false : {
     loading: '@/components/PageLoading/index',
   },
   targets: {
