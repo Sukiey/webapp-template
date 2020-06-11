@@ -14,7 +14,7 @@ export default defineConfig({
   dva: {
     hmr: true,
   },
-  outputPath: "../server/views",
+  outputPath: "../build/views",
   layout: {
     name: 'Ant Design Pro',
     locale: true,

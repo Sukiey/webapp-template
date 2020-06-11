@@ -1,4 +1,4 @@
-import * as Koa from 'koa';
+import Koa = require('koa');
 import router from './router';
 
 const path = require('path');
