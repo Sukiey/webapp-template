@@ -4,7 +4,7 @@
   "private": true,
   "description": "An out-of-box UI solution for enterprise applications",
   "scripts": {
-    "build": "npm:build-server && npm:build-client",
+    "build": "npm run build-server && npm run build-client",
     "build-server": "tsc -p server/tsconfig.json",
     "build-client": "cross-env APP_ROOT=client umi build",
     "start": "concurrently npm:dev-server npm:server",
