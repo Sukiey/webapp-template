@@ -19,10 +19,10 @@
 
 ## 项目搭建过程
 
-* [umijs项目根目录改为 client]()
-* [koa server 代码热更新]()
-* [npm script 同时执行两条监听命令]()
-* [前后端项目混合应用开发]()
+* [umijs 重新指定项目根目录](https://github.com/Sukiey/webapp-template/issues/1)
+* [koa server nodemon 实现代码热更新](https://blog.csdn.net/qq_38859502/article/details/94358238)
+* [npm script 并行执行多条命令](https://www.cnblogs.com/joyco773/p/11403804.html)
+* [前后端项目混合应用开发](https://github.com/Sukiey/webapp-template/issues/5)
 
 ## 构建和本地部署
 
@@ -30,7 +30,7 @@
 >
 > * [官方文档](https://docs.docker.com/engine/reference/commandline/push/)
 > * [参考文档](https://hujb2000.gitbooks.io/docker-flow-evolution/content/cn/basis/dockerfiledetail.html)
-
+> * [docker基本概念和常用操作总结](https://github.com/Sukiey/webapp-template/issues/4)
 * build docker image
 
 ``` BASH
